@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-nunito);
+  --font-mono: var(--font-geist-mono);
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-field: var(--field);
+  --color-head: var(--head);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-divider: var(--divider);
+  --color-brand: #4880ff;
+  --color-success: #00b69b;
+  --color-danger: #ef3826;
+  --color-alert: #ea0234;
+  --color-fall: #f93c65;
+  --color-warning: #ffa756;
+  --color-violet: #6226ef;
+  --color-magenta: #ba29ff;
+  --color-tile-violet: #8280ff;
+  --color-tile-yellow: #fec53d;
+  --color-tile-green: #4ad991;
+  --color-tile-orange: #ff9066;
+  --shadow-card: var(--card-shadow);
+  --shadow-pop: var(--pop-shadow);
+}
+
+:root {
+  --page: #f5f6fa;
+  --surface: #ffffff;
+  --field: #f5f6fa;
+  --head: #fcfdfd;
+  --panel: #f1f4f9;
+  --ink: #202224;
+  --muted: #606060;
+  --faint: #a6a6a6;
+  --line: #d5d5d5;
+  --divider: #e7e7e7;
+  --card-shadow: 6px 6px 54px rgba(0, 0, 0, 0.05);
+  --pop-shadow: 0 13px 61px rgba(169, 169, 169, 0.37);
+}
+
+.dark {
+  color-scheme: dark;
+  --page: #1b2431;
+  --surface: #273142;
+  --field: #323d4e;
+  --head: #323d4e;
+  --panel: #323d4e;
+  --ink: #ffffff;
+  --muted: #bec1c6;
+  --faint: #a4a7ad;
+  --line: #313d4f;
+  --divider: #3f4756;
+  --card-shadow: none;
+  --pop-shadow: 0 13px 61px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 0.875rem;
+}
